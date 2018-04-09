@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1523247821 source:c:\users\costelo\desktop\ingresomecon2018-master\programacion1y-laboratorio1-master\tp_1_cascara\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1523245225 c:\users\costelo\desktop\ingresomecon2018-master\programacion1y-laboratorio1-master\tp_1_cascara\funciones.h
+
