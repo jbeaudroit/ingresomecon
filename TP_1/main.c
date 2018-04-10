@@ -38,38 +38,45 @@ fflush(stdin);
         switch(opcion)
         {
             case 1:
-                printf("ingrese el primer operando");
+                printf("ingrese el primer operando: ");
                scanf("%f", &numeroX);
+               fflush(stdin);
                 break;
             case 2:
-                printf("ingrese el segundo operando");
+                printf("ingrese el segundo operando: ");
                 scanf("%f", &numeroY);
+                fflush(stdin);
                 break;
             case 3:
             suma=sumar(numeroX, numeroY);
             printf("La suma de ambos numeros da como resultado: %f\n", suma);
+            fflush(stdin);
                 break;
             case 4:
             resta=restar(numeroX, numeroY);
             printf("La resta de ambos numeros da como resultado: %f\n", resta);
+            fflush(stdin);
                 break;
             case 5:
                 if (numeroY!=0)
                 {
                   division=dividir(numeroX, numeroY);
                   printf("La division de ambos numeros da como resultado: %f\n", division);
+                  fflush(stdin);
                 }
                 else
                 {
                    printf("La operacion de division no puede realizarse si se divide por 0");
+                   fflush(stdin);
                 }
                 break;
             case 6:
-                multiplicacion=multiplicar(numeroX, numeroY);
-                  printf("La multiplicacion de ambos numeros da como resultado: %f\n", multiplicacion);
+            multiplicacion=multiplicar(numeroX, numeroY);
+            printf("La multiplicacion de ambos numeros da como resultado: %f\n", multiplicacion);
+            fflush(stdin);
                 break;
             case 7:
-                if (numeroX==0)
+                if (numeroX==0 || numeroX==1)
                 {
                 factorializacion=1;
                 }
@@ -77,21 +84,34 @@ fflush(stdin);
                 {
                 factorializacion=factorial(numeroX);
                 }
-                printf("el factorial es %d", factorializacion);
+                printf("el factorial es: %d", factorializacion);
+                fflush(stdin);
                 break;
             case 8:
+                suma=sumar(numeroX, numeroY);
                 printf("La suma de ambos numeros da como resultado: %f\n", suma);
+                resta=restar(numeroX, numeroY);
                 printf("La resta de ambos numeros da como resultado: %f\n", resta);
                 if (numeroY!=0)
                 {
+                division=dividir(numeroX, numeroY);
                 printf("La division de ambos numeros da como resultado: %f\n", division);
                 }
                 else
                 {
-                printf("La operacion de division no puede realizarse si se divide por 0");
+                printf("La operacion de division no puede realizarse si se divide por 0\n");
                 }
+                division=dividir(numeroX, numeroY);
                 printf("La multiplicacion de ambos numeros da como resultado: %f\n", multiplicacion);
-                printf("el factorial es %d", factorializacion);
+                if (numeroX==0 || numeroX==1)
+                {
+                factorializacion=1;
+                }
+                else
+                {
+                factorializacion=factorial(numeroX);
+                }
+                printf("el factorial es: %d", factorializacion);
                 break;
             case 9:
                 seguir = 'n';
